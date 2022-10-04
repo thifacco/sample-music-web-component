@@ -9,7 +9,7 @@ class EasyBank extends HTMLElement {
     super();
     const shadow = this.attachShadow({ mode: 'open' });
     this.setStyle(shadow);
-    this.setView(shadow);
+    this.setView('/easyBank/easyBank.html', shadow);
   }
 
   setStyle(shadow) {
@@ -22,46 +22,18 @@ class EasyBank extends HTMLElement {
     shadow.appendChild(style);
   }
 
-  setView(shadow) {
-    let element = document.createElement('div');
-    element.classList.add('easy-bank');
-    element.innerHTML = `
-      <h1>EasyBank</h1>
-      <div class="nova-conta">
-        <h6>Abrir nova conta</h6>
-        <form name="abrir-nova-conta">
-          <input type="text" name="nome-titular" placeholder="Nome do titular" />
-          <input type="text" name="cpf-titular" placeholder="CPF do titular" />
-        </form>
-      </div>
-      <div class="minha-conta">
-        <h6>Minha conta</h6>
-        <div class="dados-conta">
-          <span id="banco-agencia"></span>
-          <span id="banco-conta"></span>
-        </div>
-        <div class="dados-titular">
-          <span id="nome-titular"></span>
-          <span id="cpf-titular"></span>
-        </div>
-        <div class="saldo-conta">
-          <span id="saldo-conta"></span>
-        </div>
-      </div>
-      <div class="banco-operacoes">
-        <h6>Operações</h6>
-        <label for="depositar-valor">Depositar valor:</label>
-        <input
-          type="number"
-          name="depositar-valor"
-          id="depositar-valor"
-          value="100"
-        />
-        <label for="sacar-valor">Sacar valor:</label>
-        <input type="number" name="sacar-valor" id="sacar-valor" value="100" />
-      </div>
-    `;
-    shadow.appendChild(element);
+  setView(component, shadow) {
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+            let cont = document.createElement('div');
+            cont.classList.add('easy-bank');
+            cont.innerHTML = this.responseText;
+            shadow.appendChild(cont);
+        }
+    }
+    xhttp.open('GET', component, true);
+    xhttp.send();
   }
 
   criarConta(_nomeTitular, _cpfTitular) {
