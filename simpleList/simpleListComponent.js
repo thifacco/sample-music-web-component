@@ -41,6 +41,9 @@ class SimpleList extends HTMLElement {
             let item = document.createElement('li');
             item.innerHTML = `<a href='${element.link}'>${element.name}</a>`;
             menu.appendChild(item);
+            if (element.embed) {
+              item.innerHTML = element.embed;
+            }
         });
       }
     }
