@@ -15,10 +15,9 @@ class EasyBank extends HTMLElement {
   setStyle(shadow) {
     const style = document.createElement('style');
     style.textContent = `
-      .easy-bank { background-color:#000; color:#fff; margin:0; padding:0; font-size:12px; }
-      .easy-bank h1 { font-size:18px; color:#c6c6c6; font-weight:700; }
-      .easy-bank h6 { font-size:14px; color:#c6c6c6; font-weight:300; }
-      .easy-bank input { border:1px solid #c6c6c6; border-radius:5px; }
+      .easy-bank { margin:0; padding:0; }
+      .easy-bank h1 { font-size:18px; font-weight:700; }
+      .easy-bank h6 { font-size:14px; font-weight:300; }
     `;
     shadow.appendChild(style);
   }
