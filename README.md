@@ -1,5 +1,5 @@
 # Sample Music Web Component
-Web component com embeds de bandas de rock do Spotify desenvolvidos com JavaScript puro.
+App de música desenvolvido com web components JavaScript
 
 # Iniciar o ambiente
 ```

@@ -1,0 +1,25 @@
+{
+  "name": "sample-music-web-component",
+  "version": "1.0.0",
+  "description": "App de música desenvolvido com web components JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm home && docker-compose up && docker-compose down",
+    "stop": "docker-compose down"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thifacco/sample-music-web-component.git"
+  },
+  "keywords": [
+    "web-component",
+    "javascript"
+  ],
+  "author": "Tiago Facco (https://github.com/thifacco)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thifacco/sample-music-web-component/issues"
+  },
+  "homepage": "http://localhost:80"
+}
