@@ -3,8 +3,8 @@ class SampleMusicComponent extends HTMLElement {
     super();
     const shadow = this.attachShadow({ mode: 'open' });
     this.loadStyle(shadow);
-    this.loadView('/sampleMusic/sampleMusic.html', shadow);
-    this.loadData('/sampleMusic/bands.json', shadow);
+    this.loadView('http://localhost:80/sampleMusic/sampleMusic.html', shadow);
+    this.loadData('http://localhost:80/sampleMusic/bands.json', shadow);
   }
 
   loadStyle(shadow) {
