@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm home && docker-compose up && docker-compose down",
+    "start": "npx webpack && npm home && docker-compose up && docker-compose down",
     "build": "npx webpack"
   },
   "repository": {
