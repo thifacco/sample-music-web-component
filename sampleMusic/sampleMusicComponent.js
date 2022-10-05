@@ -47,6 +47,21 @@ class SampleMusicComponent extends HTMLElement {
         padding: 0 0.75rem;
         color: #fff;
       }
+      .sample-music .footer {
+        background: rgb(18,18,18);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem 0;
+      }
+      .sample-music .footer a {
+        color: #1ED760;
+        text-decoration: none;
+        font-weight: 300;
+      }
+      .sample-music .footer a:hover {
+        text-decoration: underline;
+      }
     `;
     shadow.appendChild(style);
   }
