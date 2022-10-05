@@ -10,6 +10,8 @@ class SampleMusicComponent extends HTMLElement {
   loadStyle(shadow) {
     const style = document.createElement('style');
     style.textContent = `
+      @import "http://localhost:80/node_modules/bootstrap/dist/css/bootstrap.min.css";
+      
       .sample-music { margin: 0; padding: 0; list-style: none; }
       .sample-music li { font-size: 12px; }
       .sample-music li a { display: block; }
@@ -42,12 +44,12 @@ class SampleMusicComponent extends HTMLElement {
             item.innerHTML = `
               <div class='spotify-band'>
                 <h2>${element.name}</h2>
-                <a href='${element.link}'>Ver ${element.name} no Spotify</a>
+                <a class='btn btn-success btn-lg' href='${element.spotifyUrl}' target='_blank'>Ver ${element.name} no Spotify</a>
               </a>
             `;
             menu.appendChild(item);
             if (element.spotifyEmbed) {
-              item.innerHTML = `
+              item.innerHTML += `
                 <div class='spotify-embed'>
                   ${element.spotifyEmbed}
                 </div>
