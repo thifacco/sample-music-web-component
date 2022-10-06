@@ -57,6 +57,9 @@ class SampleMusicComponent extends HTMLElement {
       .sample-music .wrap-bands h2 {
         color: #fff;
       }
+      .sample-music .wrap-bands .btn {
+        display: block !important;
+      }
       .sample-music .footer {
         background: rgb(18,18,18);
         color: #fff;
