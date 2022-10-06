@@ -12,6 +12,14 @@ class SampleMusicComponent extends HTMLElement {
     const style = document.createElement('style');
     style.textContent = `
       @import "${window.location.origin}/node_modules/bootstrap/dist/css/bootstrap.min.css";
+      @import "${window.location.origin}/node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css";
+      @import "${window.location.origin}/node_modules/@fortawesome/fontawesome-free/css/solid.min.css";
+      @import "${window.location.origin}/node_modules/@fortawesome/fontawesome-free/css/regular.min.css";
+      @import "${window.location.origin}/node_modules/@fortawesome/fontawesome-free/css/brands.min.css";
+
+      .sample-music .navbar .navbar-share a {
+        color: #fff;
+      }
       .sample-music .jumbotron {
         background: rgb(72,72,72);
         background: linear-gradient(180deg, rgba(72,72,72,1) 0%, rgba(18,18,18,1) 96%);
@@ -42,20 +50,23 @@ class SampleMusicComponent extends HTMLElement {
       .sample-music .wrap-bands { 
         background: rgb(18,18,18);
         padding: 1rem;
+        color: #fff;
+        font-size: 12px;
+        line-height: 16px;
       }
       .sample-music .wrap-bands h2 {
-        padding: 0 0.75rem;
         color: #fff;
       }
       .sample-music .footer {
         background: rgb(18,18,18);
+        color: #fff;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 1.5rem 0;
       }
       .sample-music .footer a {
-        color: #1ED760;
+        color: #fff;
         text-decoration: none;
         font-weight: 300;
       }
