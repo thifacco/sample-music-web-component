@@ -1,5 +1,5 @@
 # Sample Music Web Component
-App de música desenvolvido com web components JavaScript
+🎧 App de música desenvolvido com web components JavaScript
 
 # Iniciar a aplicação
 
